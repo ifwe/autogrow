@@ -11,8 +11,11 @@ define(['src/taggedAutogrow', 'angular/mocks'], function() {
       this.elem.css({
         height: ORIGINAL_HEIGHT,
         width: ORIGINAL_WIDTH,
+        lineHeight: '12px',
+        fontSize: '12px',
         padding: 0,
-        border: 0
+        border: 0,
+        margin: 0
       });
 
       // Tests won't pass unless the textarea is added to the document.
@@ -38,19 +41,22 @@ define(['src/taggedAutogrow', 'angular/mocks'], function() {
       this.elem.css('height').should.equal(ORIGINAL_HEIGHT);
     });
 
-    // TODO - These tests fail in Phantom for some reason
-    xit('increases height as text value grows', function() {
+    it('increases height as text value grows', function() {
       this.compile(this.elem)(this.scope);
       this.elem.css('height').should.equal(ORIGINAL_HEIGHT);
       this.scope.test = 'test\ntest';
       this.scope.$apply();
       this.timeout.flush();
+      this.elem.css('height').should.equal('30px');
+      this.scope.test = 'test\ntest\ntest';
+      this.scope.$apply();
       this.elem.css('height').should.equal('36px');
     });
-    xit('reduces height as text value shrinks', function() {
+
+    it('reduces height as text value shrinks', function() {
       this.compile(this.elem)(this.scope);
       this.elem.css('height').should.equal(ORIGINAL_HEIGHT);
-      this.scope.test = 'test\ntest';
+      this.scope.test = 'test\ntest\ntest';
       this.scope.$apply();
       this.timeout.flush();
       this.elem.css('height').should.equal('36px');
