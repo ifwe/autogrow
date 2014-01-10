@@ -1,5 +1,5 @@
 {
-  "name": "tagged-auto-grow",
+  "name": "tagged-autogrow",
   "private": true,
   "scripts": {
     "test": "grunt travis"

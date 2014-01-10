@@ -16,7 +16,7 @@ app.controller('MainController', ['$scope', function($scope) {
 ```html
 <div ng-app="MyApp">
   <div ng-controller="MainController">
-    <textarea ng-model="myModel" tagged-auto-grow></textarea>
+    <textarea ng-model="myModel" tagged-autogrow></textarea>
   </div>
 </div>
 ```
@@ -33,7 +33,7 @@ And add the module `tagged.directives.autogrow` to your app's dependencies:
 var app = angular.module('MyApp', ['tagged.directives.autogrow']);
 ```
 
-Then simply add the `tagged-auto-grow` attribute to any `textarea` that is wired
+Then simply add the `tagged-autogrow` attribute to any `textarea` that is wired
 up with `ng-model`. Style the textarea as usual, and it will grow automatically
 as the user types.
 

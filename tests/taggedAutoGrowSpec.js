@@ -1,5 +1,5 @@
 /*jshint expr: true*/
-define(['src/taggedAutoGrow', 'angular/mocks'], function() {
+define(['src/taggedAutogrow', 'angular/mocks'], function() {
   describe('Module: tagged.directives.autogrow', function() {
     var ORIGINAL_HEIGHT = '30px';
     var ORIGINAL_WIDTH = '100px';
@@ -7,7 +7,7 @@ define(['src/taggedAutoGrow', 'angular/mocks'], function() {
     beforeEach(module('tagged.directives.autogrow'));
 
     beforeEach(inject(function($rootScope, $compile, $document, $timeout) {
-      this.elem = angular.element('<textarea ng-model="test" tagged-auto-grow></textarea>');
+      this.elem = angular.element('<textarea ng-model="test" tagged-autogrow></textarea>');
       this.elem.css({
         height: ORIGINAL_HEIGHT,
         width: ORIGINAL_WIDTH,

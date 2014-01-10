@@ -1,11 +1,11 @@
-/*! tagged-auto-grow - v1.0.0 - 2014-01-10 */
+/*! tagged-autogrow - v1.0.0 - 2014-01-10 */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['angular'], factory);
   } else {
     // Browser globals
-    root.taggedInfiniteScroll = factory(root.angular);
+    root.taggedAutogrow = factory(root.angular);
   }
 }(this, function (angular) {
   "use strict";
@@ -22,10 +22,10 @@
    *  -o-transition: 0.05s;
    * }
    *
-   * Usage: <textarea ng-model="myModel" tagged-auto-grow></textarea>
+   * Usage: <textarea ng-model="myModel" tagged-autogrow></textarea>
    */
   var module = angular.module('tagged.directives.autogrow', []);
-  module.directive('taggedAutoGrow', ['$window', '$document', '$timeout', function($window, $document, $timeout) {
+  module.directive('taggedAutogrow', ['$window', '$document', '$timeout', function($window, $document, $timeout) {
     var $shadow = angular.element('<div></div>').css({
       position: 'absolute',
       top: '-10000px',
@@ -69,8 +69,5 @@
     };
   }]);
 
-  // Just return a value to define the module export.
-  // This example returns an object, but the module
-  // can return a function as the exported value.
   return module;
 }));
