@@ -23,9 +23,9 @@ app.controller('MainController', ['$scope', function($scope) {
 
 ## Getting Started
 
-To get started, add `taggedAutoGrow-min.js` to your webpage:
+To get started, add `taggedAutogrow-min.js` to your webpage:
 ```html
-<script type="text/javascript" src="path/to/taggedAutoGrow-min.js"></script>
+<script type="text/javascript" src="path/to/taggedAutogrow-min.js"></script>
 ```
 
 And add the module `tagged.directives.autogrow` to your app's dependencies:
@@ -64,9 +64,9 @@ requirejs.config({
 });
 ```
 
-Once configured, you can `require()` the original source file `src/taggedAutoGrow` in your app:
+Once configured, you can `require()` the original source file `src/taggedAutogrow` in your app:
 ```js
-define(['angular', 'path/to/src/taggedAutoGrow'], function(angular) {
+define(['angular', 'path/to/src/taggedAutogrow'], function(angular) {
   var app = angular.module('MyApp', ['tagged.directives.autogrow']);
   
   // ...
