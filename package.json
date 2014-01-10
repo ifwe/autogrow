@@ -1,6 +1,6 @@
 {
-  "name": "tagged-autogrow",
-  "version": "0.0.1",
+  "name": "tagged-auto-grow",
+  "private": true,
   "scripts": {
     "test": "grunt travis"
   },
