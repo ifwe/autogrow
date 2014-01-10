@@ -1,0 +1,26 @@
+{
+  "name": "tagged-auto-grow",
+  "version": "1.0.0",
+  "authors": [
+    "Hector Virgen <hvirgen@tagged.com>"
+  ],
+  "description": "AutoGrow for AngularJS",
+  "main": "taggedAutoGrow.js",
+  "keywords": [
+    "Angular",
+    "Directive",
+    "Autogrow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.3",
+    "angular-mocks": "~1.2.3",
+    "jquery": "1.10.2"
+  }
+}
