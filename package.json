@@ -1,5 +1,5 @@
 {
-  "name": "tagged-infinite-scroll",
+  "name": "tagged-autogrow",
   "version": "0.0.1",
   "scripts": {
     "test": "grunt travis"
