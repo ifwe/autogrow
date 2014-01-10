@@ -14,8 +14,8 @@ module.exports = function(grunt) {
           '<%= grunt.template.today("yyyy-mm-dd") %> */\n',
       },
       build: {
-        src: ['src/taggedAutoGrow.js'],
-        dest: 'taggedAutoGrow.js'
+        src: ['src/taggedAutogrow.js'],
+        dest: 'taggedAutogrow.js'
       },
     },
 
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         files: {
-          'taggedAutoGrow.min.js': ['taggedAutoGrow.js']
+          'taggedAutogrow.min.js': ['taggedAutogrow.js']
         }
       }
     }
