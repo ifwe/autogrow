@@ -1,3 +1,4 @@
+/*! tagged-autogrow - v1.0.3 - 2015-07-21 */
 /*! tagged-autogrow - v1.0.2 - 2014-01-10 */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -36,7 +37,12 @@
 
     return {
       require: 'ngModel',
-      link: function(scope, element, attr) {
+      scope: {
+        noPadding: '=?'
+      },
+      link: function(scope, element, attr, ctrl) {
+        scope.noPadding = scope.noPadding || false;
+
         $timeout(function() {
           var minHeight = element[0].offsetHeight,
             styles = $window.getComputedStyle(element[0]),
@@ -44,22 +50,28 @@
               'width', 'boxSizing', 'paddingTop', 'paddingRight',
               'paddingBottom', 'paddingLeft', 'borderTopWidth',
               'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth',
-              'lineHeight'
+              'lineHeight', 'fontSize'
             ];
 
-          scope.$watch(attr.ngModel, function() {
+          scope.$watch(function () {
+            return ctrl.$modelValue;
+          }, function() {
             var newStyles = {},
               // additional text to add to the shadow element
               padding = ' oooooo',
               val,
               height;
 
+            // Refresh styles on model change in case they have changed
+            styles = $window.getComputedStyle(element[0]);
             angular.forEach(stylesToDuplicate, function(style) {
               newStyles[style] = styles[style];
             });
 
             $shadow.css(newStyles);
-            val = element.val().replace(/\n$/g, "\n.") + padding;
+            val = element.val().replace(/\n$/g, "\n.");
+            if (!scope.noPadding)
+              val = val + padding;
             $shadow.text(val);
             height = Math.max($shadow[0].offsetHeight, minHeight);
             element.css('height', height + 'px');
