@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 
     coveralls: {
       options: {
-        coverage_dir: 'coverage/'
+        coverageDir: 'coverage/'
       }
     },
 
@@ -82,5 +82,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', 'Builds files for production', ['concat:build', 'uglify:build']);
 
   // Travis CI task
-  grunt.registerTask('travis', 'Travis CI task', ['karma:travis', 'coveralls']);
+  // Disabling coveralls for now until we change our github repo name in coveralls to "ifwe"
+  grunt.registerTask('travis', 'Travis CI task', ['karma:travis'/*, 'coveralls'*/]);
 };
