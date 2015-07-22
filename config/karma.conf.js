@@ -4,7 +4,6 @@ module.exports = function(config) {
   config.set({
     // base path, that will be used to resolve files and exclude
     basePath: '../',
-    urlRoot: '/base/',
 
     // frameworks to use
     frameworks: ['mocha', 'requirejs', 'sinon-chai'],
@@ -71,7 +70,7 @@ module.exports = function(config) {
       'karma-firefox-launcher',
       'karma-phantomjs-launcher',
       'karma-safari-launcher',
-      
+
       // Reporters
       'karma-coverage',
       'karma-junit-reporter',
