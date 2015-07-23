@@ -1,4 +1,4 @@
-/*! tagged-autogrow - v1.0.3 - 2015-07-21 */
+/*! tagged-autogrow - v1.0.3 - 2015-07-22 */
 /*! tagged-autogrow - v1.0.2 - 2014-01-10 */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -31,7 +31,8 @@
       position: 'absolute',
       top: '-10000px',
       left: '-10000px',
-      whiteSpace: 'pre-wrap'
+      whiteSpace: 'pre-wrap',
+      wordWrap: 'break-word'
     });
     angular.element($document[0].body).append($shadow);
 
