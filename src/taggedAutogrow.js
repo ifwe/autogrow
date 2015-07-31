@@ -30,7 +30,8 @@
       position: 'absolute',
       top: '-10000px',
       left: '-10000px',
-      whiteSpace: 'pre-wrap'
+      whiteSpace: 'pre-wrap',
+      wordWrap: 'break-word'
     });
     angular.element($document[0].body).append($shadow);
 

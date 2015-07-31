@@ -1,8 +1,9 @@
 {
   "name": "tagged-autogrow",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "authors": [
-    "Hector Virgen <hvirgen@tagged.com>"
+    "Hector Virgen <hvirgen@tagged.com>",
+    "David Kaminsky <dkaminsky@ifwe.co>"
   ],
   "description": "Autogrow for AngularJS",
   "main": "taggedAutogrow.js",
